@@ -1,7 +1,7 @@
 ﻿using Exercise.Warriors.Players;
 using System;
 
-namespace Exercise.Warriors.Entities.States
+namespace Exercise.Warriors.States
 {
     public class NormalState : IState
     {

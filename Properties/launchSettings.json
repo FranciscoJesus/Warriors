@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Exercise.Warriors": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

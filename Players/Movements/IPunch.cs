@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Exercise.Warriors.Players.Movements
+﻿namespace Exercise.Warriors.Players.Movements
 {
     public interface IPunch
     {

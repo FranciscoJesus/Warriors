@@ -1,7 +1,7 @@
-﻿using Exercise.Warriors.Entities.States;
-using Exercise.Warriors.Players.Movements;
+﻿using Exercise.Warriors.Players.Movements;
+using Exercise.Warriors.States;
 
-namespace Exercise.Warriors.Entities
+namespace Exercise.Warriors.Players
 {
     public abstract class Warrior : IKick, IPunch
     {

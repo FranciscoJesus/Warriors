@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Exercise.Warriors.Entities
+namespace Exercise.Warriors.Players
 {
     public class Boxer : Warrior
     {

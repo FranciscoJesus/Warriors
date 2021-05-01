@@ -1,6 +1,6 @@
-﻿using Exercise.Warriors.Entities;
+﻿using Exercise.Warriors.Players;
 using System;
-using System.Collections.Generic;
+using System.Linq;
 
 namespace Exercise.Warriors
 {
@@ -8,12 +8,7 @@ namespace Exercise.Warriors
     {
         static void Main(string[] args)
         {
-            var dwarf = new Dwarf();
-            var boxer = new Boxer();
-            var elf = new Elf();
-            var kangaroo = new Kangaroo();
-
-            var warriors = new List<Warrior> { dwarf, boxer, elf, kangaroo };
+            var warriors = WarriorType.List.Select(s => s.CreatePlayer()).ToList();
 
             // DO NOT TOUCH THIS
             foreach (var warrior in warriors)
@@ -24,9 +19,13 @@ namespace Exercise.Warriors
             }
             // END OF DO NOT TOUCH THIS
 
-            dwarf.GetInfected();
-            boxer.GetInfected();
-            elf.GetInfected();
+            warriors.ForEach(x =>
+            {
+                if (x.GetType() != typeof(Kangaroo))
+                {
+                    x.GetInfected();
+                }
+            });
 
             foreach (var warrior in warriors)
             {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Exercise.Warriors.Entities
+namespace Exercise.Warriors.Players
 {
     public class Kangaroo : Warrior
     {

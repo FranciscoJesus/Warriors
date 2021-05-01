@@ -1,4 +1,4 @@
-﻿namespace Exercise.Warriors.Entities.States
+﻿namespace Exercise.Warriors.States
 {
     public interface IState
     {
