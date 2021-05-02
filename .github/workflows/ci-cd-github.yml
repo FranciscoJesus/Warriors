@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       sln_path: ./Exercise.Warriors.sln
-      dockerfile_path: ./src/Exercise.Warriors/Dockerfile
+      dockerfile_path: ./src/Exercise.Warriors
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET
@@ -35,6 +35,5 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
         tags: ${{ github.run_number }}
-        path: .
-        file: ${{ env.dockerfile_path }}
+        path: ${{ env.dockerfile_path }}
 
