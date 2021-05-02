@@ -35,6 +35,6 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
         tags: ${{ github.run_number }}
-        context: .
+        path: .
         file: ${{ env.dockerfile_path }}
 
