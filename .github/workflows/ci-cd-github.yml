@@ -32,8 +32,8 @@ jobs:
     - name: Build and push Docker images
       uses: docker/build-push-action@v2.4.0
       with:
-        username: ${{ secrests.DOCKERHUB_USERNAME }}
-        password: ${{ secrests.DOCKERHUB_PASSWORD }}
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
         tags: ${{ github.run_number }}
         path: .
         dockerfile: $dockerfile_path
