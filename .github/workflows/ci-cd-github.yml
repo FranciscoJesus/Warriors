@@ -10,6 +10,8 @@ on:
 jobs:
   build_warriors_exercise:
     runs-on: ubuntu-latest
+    env:
+      sln_path: ./Exercise.Warriors.sln
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET
@@ -18,10 +20,11 @@ jobs:
         dotnet-version: 3.1.x
         
     - name: Restore dependencies
-      run: dotnet restore ./Exercise.Warriors.sln
+      run: dotnet restore $sln_path
       
     - name: Build
-      run: dotnet build ./Exercise.Warriors.sln --no-restore
+      run: dotnet build $sln_path --no-restore
       
     - name: Test
-      run: dotnet test ./Exercise.Warriors.sln --no-build --verbosity normal
+      run: dotnet test $sln_path --no-build --verbosity n
+
