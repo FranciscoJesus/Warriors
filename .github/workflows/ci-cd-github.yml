@@ -18,10 +18,10 @@ jobs:
         dotnet-version: 3.1.x
         
     - name: Restore dependencies
-      run: dotnet restore ./src/Exercise.Warriors
+      run: dotnet restore ./Exercise.Warriors.sln
       
     - name: Build
-      run: dotnet build ./src/Exercise.Warriors --no-restore
+      run: dotnet build ./Exercise.Warriors.sln --no-restore
       
     - name: Test
-      run: dotnet test ./test/Exercise.Warriors.Test --no-build --verbosity normal
+      run: dotnet test ./Exercise.Warriors.sln --no-build --verbosity normal
