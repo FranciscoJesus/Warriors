@@ -8,7 +8,7 @@ on:
     
 
 jobs:
-  build Warriors Exercise:
+  build_warriors_exercise:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
