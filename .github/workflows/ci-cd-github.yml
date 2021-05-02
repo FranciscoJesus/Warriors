@@ -13,7 +13,6 @@ jobs:
     env:
       sln_path: ./Exercise.Warriors.sln
       dockerfile_path: ./src/Exercise.Warriors
-      dockerfile_file: ./src/Exercise.Warriors/Dockerfile
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET
@@ -36,6 +35,5 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
         tags: ${{ github.run_number }}
-        path: ${{ env.dockerfile_path }}
-        dockerfile: ${{ env.dockerfile_file }}
+        context: ${{ env.dockerfile_path }}
 
