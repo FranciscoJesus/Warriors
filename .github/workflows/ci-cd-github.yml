@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       sln_path: ./Exercise.Warriors.sln
-      dockerfile_path: ./src/Exercise.Warriors
+      dockerfile_path: ./src/Exercise.Warriors/Dockerfile
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET
