@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       sln_path: ./Exercise.Warriors.sln
+      dockerfile_path: ./src/Exercise.Warriors
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET
@@ -27,4 +28,13 @@ jobs:
       
     - name: Test
       run: dotnet test $sln_path --no-build --verbosity n
+
+    - name: Build and push Docker images
+      uses: docker/build-push-action@v2.4.0
+      with:
+        username: ${{ secrests.DOCKERHUB_USERNAME }}
+        password: ${{ secrests.DOCKERHUB_PASSWORD }}
+        tags: ${{ github.run_number }}
+        path: .
+        dockerfile: $dockerfile_path
 
