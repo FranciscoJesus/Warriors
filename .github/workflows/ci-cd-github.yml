@@ -36,5 +36,5 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
         tags: ${{ github.run_number }}
         path: .
-        dockerfile: $dockerfile_path
+        dockerfile: ${{ dockerfile_path }}
 
