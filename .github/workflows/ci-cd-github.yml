@@ -36,4 +36,5 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
         tags: ${{ github.run_number }}
         context: ${{ env.dockerfile_path }}
+        push: true
 
